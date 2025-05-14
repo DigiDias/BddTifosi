@@ -39,12 +39,12 @@ order by b.nom asc;
 
 Capri-sun	Coca-cola
 Coca-cola original	Coca-cola
-Coca-cola z?ro	Coca-cola
+Coca-cola zéro	Coca-cola
 Eau de source 	Cristalline
 Fanta citron	Coca-cola
 Fanta orange	Coca-cola
 Lipton Peach	Pepsico
-Lipton z?ro citron	Pepsico
+Lipton zéro citron	Pepsico
 Monster energy ultra blue	Monster
 Monster energy ultra gold	Monster
 Pepsi	Pepsico
@@ -53,7 +53,7 @@ Pepsi Max Zéro	Pepsico*/
 
 /*5 - Afficher la liste des ingrédients pour une Raclaccia,*/
 
-SELECT f.nom, fi.id_ingredient, i.nom as ingredient  from foccacia f
+SELECT i.nom as ingredient  from foccacia f
 left join foccacia_ingredient fi on f.id_foccacia = fi.id_foccacia
 left join ingredient i on fi.id_ingredient = i.id_ingredient
 where f.nom = 'Raclaccia'
@@ -116,7 +116,7 @@ left join foccacia_ingredient fi on f.id_foccacia = fi.id_foccacia
 left join ingredient i on fi.id_ingredient = i.id_ingredient
 WHERE i.nom = "Ail"
 
-*/Résultat attendu Mozaccia, Gorgonzollaccia, Raclaccia, Paysanne*/
+/*Résultat attendu Mozaccia, Gorgonzollaccia, Raclaccia, Paysanne*/
 
 /*Résultat obtenu : 
 
